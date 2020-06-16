@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 
 float echelon(float a[3][3])
@@ -8,7 +6,7 @@ float echelon(float a[3][3])
 	float b[3][3];
 	int i, j, r, k, c, d;
 	float temp;
-    int m=3,n=3;
+        int m=3,n=3;
 	for (i = 0; i < m; i++)
 	{
 		for (j = 0; j < n; j++)
@@ -16,10 +14,7 @@ float echelon(float a[3][3])
 			b[i][j] = a[i][j];
 		}
 	}
-
-
-
-	printf("\n\n");
+        printf("\n\n");
 	for (c = 0; c < (m - 1); c++)
 	{
 		if (b[c][c] == 0)
@@ -75,10 +70,9 @@ int main()
 {
    float matrix[9][3][3];                //  size = 3 &  size*size = 9
    float SUB[3][3];
-   float subM[3][3];
    int size;
    size=3;
-   int t=size*size;                    //  t = total number of sub matrices   here, it's 9
+   int t=size*size;                    //  t = 9 ( total number of sub matrices )  
    int i,j,k,l,c,d;
    int next=0;
    float y,z;
@@ -107,13 +101,13 @@ int main()
                {
 
                    x =  (int)matrix[next+k][j][l];
-			       y =  matrix[next+k][j][l] ;
+		   y =  matrix[next+k][j][l] ;
                    z =  matrix[next+k][j][l];
-			       y = y - x;
-                if (y == 0)
+	           y =  y - x;
+                   if (y == 0)
 				   printf("       %d", x);
-                else
-			       printf("       %f",z);
+                   else
+			           printf("       %f",z);
                }
                printf("    ");
            }
@@ -125,7 +119,6 @@ int main()
   next=0;
   for(i=0;i<t;i++)
   {
-
       for(j=0;j<size;j++)
       {
          for(k=0;k<size;k++)
@@ -138,11 +131,9 @@ int main()
      {
          for(k=0;k<size;k++)
          {
-             matrix[i][j][k]=SUB[j][k];
-
+               matrix[i][j][k]=SUB[j][k];
          }
      }
-
   }
   printf("\n");
   printf("               **********Final Echelon*************");
@@ -156,13 +147,13 @@ int main()
                for(l=0;l<size;l++)
                {
                    x =  (int)matrix[next+k][j][l];
-			       y =  matrix[next+k][j][l] ;
+	           y =  matrix[next+k][j][l] ;
                    z =  matrix[next+k][j][l];
-			       y =  y - x;
-                if (y == 0)
+		   y =  y - x;
+                   if (y == 0)
 				   printf("       %d", x);
-                else
-			       printf("       %f",z);
+                   else
+			           printf("       %f",z);
                }
                printf("      ");
            }
